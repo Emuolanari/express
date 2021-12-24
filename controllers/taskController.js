@@ -24,7 +24,7 @@ exports.getAllTasks = async (req, res) => {
 
 exports.createTask = async (req, res) => {
     try {
-        const newTask = await Task.create(Tareq.body);
+        const newTask = await Task.create(req.body);
         res.status(201).json({
             'status': 'success',
             'message': ' task added successfully'
